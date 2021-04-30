@@ -3,6 +3,9 @@
   margin: 0;
   font-family: "Roboto", sans-serif !important;
 }
+body {
+  padding-top: 81px;
+}
 h1, h2, h3 {
   font-weight: 300;
   color: #364143;
@@ -100,7 +103,7 @@ h1 {
   font-size: 15px;
 }
 .card-content {
-  padding: 10px 20px;
+  padding: 10px 0;
 }
 .card-content p {
   font-size: 14px;
@@ -125,4 +128,10 @@ h1 {
 }
 .is-hidden {
   display: none !important;
+}
+.container-emergent-notification{
+  position: absolute;
+  left: 50%;
+  top: 91px;
+  margin-left: -99px;
 }

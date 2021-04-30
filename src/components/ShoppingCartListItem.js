@@ -2,7 +2,7 @@ import React from 'react'
 import { FaTimes } from 'react-icons/fa'
 import CurrencyFormat from 'react-currency-format'
 
-const ShoppingCartListItem = ({ name, image, price, quantity, removeToCart, notShowRemove }) =>
+const ShoppingCartListItem = ({ name, image, price, removeToCart, notShowRemove }) =>
   <li className="shopping-cart-item">
     <figure className="shopping-cart-item__figure">
       <img className="shopping-cart-item__image" src={image} />
@@ -14,9 +14,9 @@ const ShoppingCartListItem = ({ name, image, price, quantity, removeToCart, notS
       <p>
         <CurrencyFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'$'} />
       </p>
-      <p><small>Cantidad: 
+      {/* <p><small>Cantidad: 
         {quantity}
-      </small></p>
+      </small></p> */}
     </div>
     {
       (!notShowRemove) &&

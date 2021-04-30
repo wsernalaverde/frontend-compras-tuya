@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import Alert from '@material-ui/lab/Alert'
 
-class Form extends Component {
+class FormOrder extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -12,7 +11,6 @@ class Form extends Component {
 	    shippingCity: '',
 	    shippingRegion: '',
 	    shippingCountry: '',
-      showSuccess: false,
       lineItems: []
     }
   }
@@ -22,65 +20,7 @@ class Form extends Component {
 
     const data = {...this.state}
 
-    delete data.showSuccess
-
     this.props.showPay(data)
-
-    // const url = `${process.env.REACT_APP_URL_SERVICE}/addSellOrder`
-
-    // try {
-
-    //   let res = await fetch(url, {
-    //     method: 'post',
-    //     headers: {
-    //       'Content-type': 'application/json'
-    //     },
-    //     body: JSON.stringify(data)
-    //   })
-
-    //   if (res.ok) {
-    //     res = await res.json()
-
-    //     this.setState({
-    //       showSuccess: 'success',
-    //       store: '',
-    //       externalOrderNumber: '',
-    //       buyerName: '',
-    //       buyerPhone: '',
-    //       buyerEmail: '',
-    //       shippingAddress: '',
-    //       shippingCity: '',
-    //       shippingRegion: '',
-    //       shippingCountry: '',
-    //       lineItems: [{
-    //         productName: '',
-    //         productQty: '',
-    //         productWeight: ''
-    //       }]  
-    //     })
-
-    //     setTimeout(() => { 
-    //       this.setState({
-    //         showSuccess: false
-    //       })
-    //       this.props.goList()
-    //     }, 1000)
-
-    //   } else {
-    //     let err = new Error()
-    //     err.data = await res.json()
-    //     throw err
-    //   }
-
-    // } catch (e) {
-    //   console.log(e.data)
-    //   this.setState({
-    //     showSuccess: 'error'
-    //   })
-    //   setTimeout(() => { this.setState({
-    //     showSuccess: false
-    //   })}, 2000)
-    // }
   }
 
   handleInputChange = (e) => {
@@ -93,17 +33,6 @@ class Form extends Component {
   render () {
     return(
       <Fragment>
-        {this.state.showSuccess === 'success' &&
-            <Alert variant="filled" severity="success">
-              Order created
-            </Alert>
-        }
-        {this.state.showSuccess === 'error' &&
-            <Alert variant="filled" severity="error">
-              Error to create Order, validate all fields and try again
-            </Alert>
-        }
-       
         <form className="custom-form" onSubmit={this.handleSubmit}>
           <div className="row-form">
             <div className="form-group">
@@ -145,4 +74,4 @@ class Form extends Component {
   }
 }
 
-export default Form
+export default FormOrder

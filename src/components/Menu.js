@@ -63,31 +63,33 @@ class Menu extends Component {
   }
 
   render () {
-    const { productList, toggleContent, backButton } = this.props
+    const { productList, toggleContent, backButton, showActions } = this.props
 
     return(
-      <div className="container-menu">
+      <nav className='container-menu fixed-top'>
         <div className="subcontainer">
           <div className="logo">
             <img src={logo} alt="Tuya" />
           </div>
-          <div className="actions">
-            {backButton
-              ? <button onClick={toggleContent} className="btn btn-purple">{ '< Volver al carrito' }</button>
-              : 
-              <button onClick={this.toggleProductList} className="btn">
-                <FaShoppingCart />           
-                <span>Carrito</span>
-                {productList.length > 0 &&
-                  <span className="shopping-cart__quantity">{productList.length}</span>
-                }
-              </button>
-            }
-            {this.renderProductList()}
-          </div>
+          {showActions &&
+            <div className="actions">
+              {backButton
+                ? <button onClick={toggleContent} className="btn">{ '< Volver al carrito' }</button>
+                : 
+                <button onClick={this.toggleProductList} className="btn">
+                  <FaShoppingCart />           
+                  <span>Carrito</span>
+                  {productList.length > 0 &&
+                    <span className="shopping-cart__quantity">{productList.length}</span>
+                  }
+                </button>
+              }
+              {this.renderProductList()}
+            </div>
+          }
         </div>
 
-      </div>
+      </nav>
     )
   }
 }

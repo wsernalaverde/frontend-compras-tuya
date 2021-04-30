@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+}
+thead {
+  background: transparent linear-gradient(
+    180deg
+    , #FA1E2D 0%, #C40311 100%) 0% 0% no-repeat padding-box;
+  color: white;
+}
+thead tr th {
+  padding: 10px;
+}
+thead tr th p {
+  color: white;
+  line-height: 17px;
+  margin: 0;
+}
+tbody tr td {
+  padding: 13px 17px;
+}
+tbody tr td p {
+  font-size: 15px;
+  margin: 0;
+}
