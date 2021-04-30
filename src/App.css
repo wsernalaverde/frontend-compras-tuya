@@ -1,0 +1,128 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif !important;
+}
+h1, h2, h3 {
+  font-weight: 300;
+  color: #364143;
+}
+p {
+  font-size: 18px;
+  color: #515C6F;
+  font-weight: 300;
+}
+b, strong {
+  font-weight: 600;
+}
+h1 {
+  font-size: 27px;
+}
+.input{
+  padding: 5px;
+  outline: none;
+  width: 90%;
+  margin: 10px 0;
+}
+.button{
+  border: 0;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 8px;
+  margin-right: 5px;
+}
+.btn {
+  padding: 8px 27px;
+  background-color: transparent;
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  font-size: 16px;
+  line-height: 160%;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px #EC1C2966;
+  background: transparent linear-gradient(180deg, #FA1E2D 0%, #C40311 100%) 0% 0% no-repeat padding-box;
+  border-radius: 16px;
+  position: relative;
+  z-index: 2;
+}
+.btn:focus, .btn:hover {
+  box-shadow: 0px 2px 5px #EC1C2966;
+  border: 0;
+  outline: none;
+  color: white;
+  text-decoration: none;
+  background: transparent linear-gradient(180deg, #FA1E2D 0%, #710008 100%) 0% 0% no-repeat padding-box;
+}
+.btn-icon {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  color: #ed1727;
+}
+.btn-blue {
+  background-image: linear-gradient(180deg, #3F4858, #3F4858);
+  transition: 0.3s;
+}
+.btn-blue:hover {
+  background-image: linear-gradient(180deg, #3F4858, #3F4858);
+  color: white;  
+}
+.btn-table {
+  line-height: 15px;
+  font-size: 13px;
+  padding: 6px 12px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 1;
+}
+.column-products {
+  flex: 2;
+}
+.card {
+  background-color: white;
+  box-shadow: 3px 3px 15px 0 hsl(0deg 0% 66% / 30%);
+  border-radius: 7px;
+  margin: 20px 12px;
+}
+.card-title {
+  border-bottom: 1px solid rgb(168 168 168 / 40%);
+  padding: 10px 0;
+}
+.card-title h2 {
+  font-size: 15px;
+}
+.card-content {
+  padding: 10px 20px;
+}
+.card-content p {
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+.card-list-product {
+  padding: 24px;
+  box-shadow: inset 3px 4px 8px #dcdcdc, inset -5px -5px 10px #fff;
+  background-color: #f5faff30;
+  margin: 10px 0;
+}
+.table-line-items tr {
+  margin: 10px 0;
+}
+.table-line-items th {
+  text-align: left;
+  border-bottom: 1px solid rgb(168 168 168 / 40%);
+  padding: 2px 5px;
+}
+.table-line-items td {
+  padding: 5px;
+}
+.is-hidden {
+  display: none !important;
+}
